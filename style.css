@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+--Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+
+--Very-Dark-Blue: hsl(234, 12%, 34%);
+--Grayish-Blue: hsl(229, 6%, 66%);
+--Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+   margin: 0 auto;
+   padding: 4rem 1.7rem; 
+   width: 100%;
+   font-family: 'Poppins', sans-serif;
+   
+}
+
+.container h1 {
+    font-size: 1.56rem;
+    text-align: center;
+    font-weight: 200;
+}
+
+.container span {
+    font-weight: 600;
+}
+
+.container-header p {
+    font-size: 1rem;
+    color: var(--Grayish-Blue);
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+.basic-box {
+    height: 235px;
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 4px 7px 6px 5px rgba(0, 0, 0, 0.041);
+    border-radius: 0.5rem;
+    position: relative;
+} 
+
+.basic-box p {
+    font-size: 0.9375rem;
+    color: var(--Grayish-Blue);
+}
+
+.basic-box img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 1.3rem;
+}
+
+.first-box {
+    border-top: 4px solid hsl(180, 62%, 55%);
+}
+
+.second-box {
+    border-top: 4px solid hsl(0, 78%, 62%);
+}
+
+.third-box {
+    border-top: 4px solid hsl(34, 97%, 64%);
+}
+
+.fourth-box {
+    border-top: 4px solid hsl(212, 86%, 64%);
+}
+
+
+
+
+
+
+
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+
+@media screen and (min-width: 800px) {
+
+    .container {
+        width: clamp(40%, 1300px, 90%)
+    }
+
+    .container-header h1 {
+        width: 33.5%;
+        margin: 0 auto;
+    }
+
+    .container-header p {
+        width: 40%;
+        margin: 0 auto;
+        margin-bottom: 3.5rem;
+        margin-top: 0.8rem;
+    }
+
+    
+
+    .box-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    .basic-box {
+        margin-top: 0;
+    }
+
+    .third-box {
+        grid-column: 2;
+    }
+
+    .fourth-box {
+        align-self: center;
+        grid-column: 3;
+        grid-row: 1 / span 2;
+        
+    }
+
+    .first-box {
+        align-self: center;
+        grid-row: span 2;
+    }
+
+}
